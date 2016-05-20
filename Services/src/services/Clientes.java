@@ -7,7 +7,7 @@ import javax.jws.WebService;
 import model.Cliente;
 
 @WebService
-public class ClienteService {
+public class Clientes {
     
     public Cliente obterCliente(int idCliente){
         IDaoManager manager = new JdbcDaoManager();

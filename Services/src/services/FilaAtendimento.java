@@ -5,7 +5,7 @@ import java.util.Queue;
 import javax.jws.WebService;
 
 @WebService
-public class FilaAtendimentoService {
+public class FilaAtendimento {
     private Integer n = 0;
     private Queue<Integer> fila = new LinkedList<Integer>();
     

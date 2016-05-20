@@ -11,7 +11,7 @@ import model.Cliente;
 import model.Plano;
 
 @WebService
-public class PlanoService {
+public class Planos {
     
     public Plano obterPlanoPorCliente(int idCliente){
         IDaoManager manager = new JdbcDaoManager();
