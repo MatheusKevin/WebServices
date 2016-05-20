@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is JAX-WS RI 2.2.9-b130926.1035 svn-revision#5f6196f2b90e9460065a4c2f4e30e065b245e51e. --><xs:schema xmlns:tns="http://services/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services/">
+
+<xs:element name="gerarSenha" type="tns:gerarSenha"></xs:element>
+
+<xs:element name="gerarSenhaResponse" type="tns:gerarSenhaResponse"></xs:element>
+
+<xs:element name="obterSenha" type="tns:obterSenha"></xs:element>
+
+<xs:element name="obterSenhaResponse" type="tns:obterSenhaResponse"></xs:element>
+
+<xs:complexType name="obterSenha">
+<xs:sequence></xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obterSenhaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="gerarSenha">
+<xs:sequence></xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="gerarSenhaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
