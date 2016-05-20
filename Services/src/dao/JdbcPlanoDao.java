@@ -16,8 +16,22 @@ public class JdbcPlanoDao implements PlanoDao{
     }
     
     @Override
-    public void alterarPlano(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void alterarPlano(Plano plano) {
+        String sql = "UPDATE planos "
+                + "SET nome = ?, descricao = ?, valor = ? "
+                + "WHERE idPlano = ?";
+        PreparedStatement ps;
+        try {
+            ps = conexao.prepareStatement(sql);
+            ps.setString(1, plano.getNome());
+            ps.setString(2, plano.getDescricao());
+            ps.setFloat(3, plano.getValor());
+            ps.setInt(4, plano.getIdPlano());
+            ps.executeUpdate();
+        } catch (SQLException ex) {
+            throw new DaoException("Ocorreu um erro ao selecionar do banco: " 
+			+ ex.getMessage());
+        }
     }
 
     @Override
@@ -73,5 +87,5 @@ public class JdbcPlanoDao implements PlanoDao{
         }
         return plano;
     }
-    
+ 
 }

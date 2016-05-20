@@ -5,7 +5,7 @@ import java.util.List;
 import model.Plano;
 
 public interface PlanoDao {
-    void alterarPlano(int id);
+    void alterarPlano(Plano plano);
     Plano obterPlanoPorId(int id);
     List<Plano> obterTodos();
     Plano popularObjeto(ResultSet rs);

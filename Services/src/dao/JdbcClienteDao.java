@@ -43,11 +43,11 @@ public class JdbcClienteDao implements ClienteDao{
             cliente.setNome(rs.getString("nome"));
             cliente.setRg(rs.getString("rg"));
             cliente.setPlano(manager.getPlanoDao().obterPlanoPorId(rs.getInt("idPlano")));
-            manager.encerrar();
         } catch (SQLException ex) {
-            manager.encerrar();
             throw new DaoException("Ocorreu um erro ao selecionar do banco: " 
 			+ ex.getMessage());
+        }finally{
+            manager.encerrar();
         }
         return cliente;
     }
