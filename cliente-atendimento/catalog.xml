@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://192.168.25.5:9999/v1/atendimento?wsdl" uri="xml-resources/web-service-references/atendimento/wsdl/192.168.25.5_9999/v1/atendimento.wsdl"/>
+    <system systemId="http://192.168.25.5:9999/v1/atendimento?xsd=1" uri="xml-resources/web-service-references/atendimento/wsdl/192.168.25.5_9999/v1/atendimento.xsd_1.xsd"/>
+</catalog>
